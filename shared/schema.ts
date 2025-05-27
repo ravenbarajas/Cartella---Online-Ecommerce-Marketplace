@@ -76,11 +76,15 @@ export const insertProductSchema = createInsertSchema(products).omit({
 export const insertCartItemSchema = createInsertSchema(cartItems).omit({
   id: true,
   createdAt: true,
+}).extend({
+  quantity: z.number().default(1),
 });
 
 export const insertOrderSchema = createInsertSchema(orders).omit({
   id: true,
   createdAt: true,
+}).extend({
+  status: z.string().default("pending"),
 });
 
 // Types
