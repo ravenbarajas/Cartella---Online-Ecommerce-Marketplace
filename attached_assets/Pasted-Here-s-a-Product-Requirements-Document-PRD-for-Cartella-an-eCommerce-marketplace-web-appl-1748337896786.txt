@@ -1,0 +1,211 @@
+Here's a **Product Requirements Document (PRD)** for **Cartella**, an eCommerce marketplace web application. This PRD is tailored for a **frontend implementation using React + Vite**, and focuses on delivering a visually engaging UI/UX.
+
+---
+
+# 🗂️ Product Requirements Document (PRD)
+
+## Project Name: **Cartella**
+
+### Version: 1.0
+
+### Type: Frontend Web Application
+
+### Stack: React + Vite + Tailwind CSS (for UI)
+
+---
+
+## 🔍 Overview
+
+**Cartella** is a modern eCommerce marketplace platform where users can **browse, purchase**, and **sell products**. The goal is to deliver an intuitive, fast, and appealing frontend experience built using **React** with **Vite** for speed and developer experience. This version is focused on frontend only, with mock data and UI states.
+
+---
+
+## 🎯 Goals
+
+* Provide users a smooth, modern shopping experience.
+* Enable user accounts with login/signup functionality.
+* Allow users to switch between **buyer** and **seller** interfaces.
+* Build out responsive pages for **Landing**, **Marketplace**, **Product Detail**, **Login/Signup**, and **Dashboard** (Seller View).
+* Ensure UI is engaging, mobile-first, and visually consistent.
+
+---
+
+## 🧱 Tech Stack
+
+| Layer      | Technology                                |
+| ---------- | ----------------------------------------- |
+| Frontend   | React (with Hooks)                        |
+| Bundler    | Vite                                      |
+| Styling    | Tailwind CSS                              |
+| Routing    | React Router v6                           |
+| State Mgmt | React Context (or Zustand for simplicity) |
+| Mock Data  | JSON static files / localStorage          |
+
+---
+
+## 🧑‍💻 User Types
+
+1. **Guest**
+
+   * Can browse marketplace.
+   * Can view product details.
+   * Can sign up or log in.
+
+2. **Buyer**
+
+   * Can browse and purchase items.
+   * Can view cart and order history.
+
+3. **Seller**
+
+   * Can list products.
+   * Can manage product listings.
+   * Can view orders.
+
+---
+
+## 🧩 Key Pages & Components
+
+### 1. **Landing Page**
+
+**Purpose:** First impression, brand intro, and conversion to login/signup.
+
+#### Features:
+
+* Hero banner (promo / mission).
+* Call-to-Action (CTA) buttons: "Explore Marketplace", "Become a Seller"
+* Product highlights carousel (mock popular items).
+* Testimonials or Trust Badges section.
+* Footer with links (About, Contact, Privacy, etc.).
+
+### 2. **Main Marketplace Page**
+
+**Purpose:** Product discovery, browsing, and filtering.
+
+#### Features:
+
+* Navbar with logo, search bar, cart icon, login/profile dropdown.
+* Category sidebar (clothing, electronics, etc.).
+* Product grid (name, image, price, rating).
+* Filters: Category, Price Range, Rating.
+* Pagination or Infinite Scroll.
+* Responsive design (grid collapse on mobile).
+
+### 3. **Product Detail Page**
+
+**Purpose:** In-depth product view.
+
+#### Features:
+
+* Product image carousel.
+* Description, specs, seller name.
+* Price & “Add to Cart” button.
+* Seller contact or link to seller store.
+* Related products section.
+
+### 4. **Login / Signup Page**
+
+**Purpose:** Account creation & authentication UI.
+
+#### Features:
+
+* Tabs or switch toggle between login/signup.
+* Form validation (email, password, confirm password).
+* Social login buttons (optional in mock).
+* Success/Error messaging.
+
+### 5. **User Dashboard**
+
+**Types:**
+
+* **Buyer View:** Order history, saved items.
+* **Seller View:** Add/edit products, view orders.
+
+#### Features:
+
+* Sidebar nav: Profile, Listings, Orders, Add Product.
+* Product table with edit/delete options.
+* Form for adding products (image upload mock, title, price, category, stock).
+
+---
+
+## 🎨 UI/UX Design Principles
+
+* **Clean Aesthetic:** Use whitespace, minimalism, and bold headings.
+* **Responsive First:** Mobile-first layout with intuitive touch interactions.
+* **Consistency:** Reusable components (cards, buttons, forms).
+* **Animation:** Subtle hover effects, transitions on modals and buttons.
+* **Dark Mode:** Optional switch for night-friendly browsing.
+
+---
+
+## 🔄 Navigation Flow
+
+```
+Guest:
+  Landing Page → Browse Marketplace → View Product → Login/Signup
+
+Buyer:
+  Login → Marketplace → Add to Cart → View Cart → (Mock Checkout) → Dashboard
+
+Seller:
+  Login → Dashboard → Add Product → View Orders
+```
+
+---
+
+## 📦 Component Structure (suggested)
+
+```
+src/
+├── assets/
+├── components/
+│   ├── Navbar.jsx
+│   ├── ProductCard.jsx
+│   ├── Footer.jsx
+│   ├── FilterSidebar.jsx
+│   ├── ProductForm.jsx
+├── pages/
+│   ├── Landing.jsx
+│   ├── Marketplace.jsx
+│   ├── ProductDetail.jsx
+│   ├── LoginSignup.jsx
+│   ├── Dashboard.jsx
+├── routes/
+│   ├── AppRoutes.jsx
+├── context/
+│   ├── AuthContext.jsx
+│   ├── ProductContext.jsx
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⌛ Timeline (Estimation for MVP)
+
+| Feature                | Time Estimate |
+| ---------------------- | ------------- |
+| Setup & Routing        | 1 day         |
+| Landing Page           | 1 day         |
+| Marketplace Page       | 2 days        |
+| Product Detail         | 1 day         |
+| Login/Signup           | 1.5 days      |
+| User Dashboard (Buyer) | 1 day         |
+| Seller Dashboard       | 2 days        |
+| Styling & Responsive   | 2 days        |
+| QA & Cleanup           | 1 day         |
+
+---
+
+## ✅ Success Criteria
+
+* User can log in and view personalized dashboard.
+* Products are displayed with filter and search functionality.
+* Sellers can add/edit products.
+* Fully responsive and visually polished.
+* All views navigable with mock data.
+
+---
+
+Would you like mockups or component wireframes next? I can generate them or even export code templates for you.
